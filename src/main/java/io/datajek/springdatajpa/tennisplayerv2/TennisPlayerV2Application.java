@@ -40,6 +40,11 @@ public class TennisPlayerV2Application implements CommandLineRunner {
 		
 		repo.deleteById(3);
 		
+	    logger.info("Inserting Player: {}", repo.insertPlayer(new Player(
+                "Thiem", "Austria", Date.valueOf("1993-09-03"), 17))); 
+		
+		logger.info("ALL players Data: {}", repo.getAllPlayers());
+		
 	}
 
 }
