@@ -1,4 +1,4 @@
-package io.datajek.springdatajpa.tennisplayerv2;
+package io.datajek.springdatajpa.tennisplayerv2.lesson2;
 
 import java.sql.Date;
 
@@ -6,14 +6,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "Player")
-@NamedQuery(name = "get_all_players", query = "select p from Player p")
-public class Player {
-
+public class Player2 {
 	@Id
 	@GeneratedValue
 	private int id;
@@ -25,11 +20,11 @@ public class Player {
 	private Date birthDate;
 	private int titles;
 
-	public Player() {
+	public Player2() {
 		super();
 	}
 
-	public Player(int id, String name, String nationality, Date birthDate, int titles) {
+	public Player2(int id, String name, String nationality, Date birthDate, int titles) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -38,7 +33,7 @@ public class Player {
 		this.titles = titles;
 	}
 
-	public Player(String name, String nationality, Date birthDate, int titles) {
+	public Player2(String name, String nationality, Date birthDate, int titles) {
 		super();
 		this.name = name;
 		this.nationality = nationality;
